@@ -1,91 +1,85 @@
+/* LandingPage.css */
+
 .landing-container {
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
 }
 
 .landing-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #f3f4f6;
+  padding: 1.5rem 3rem;
+  background-color: #0288d1;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.landing-header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 
-nav a {
-  margin-left: 1rem;
+.landing-header nav a {
+  color: white;
   text-decoration: none;
-  color: #333;
+  margin-left: 2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background: #eef6ff;
+.landing-header nav a:hover {
+  color: #b3e5fc;
 }
 
-.hero-text {
-  max-width: 50%;
+.landing-main {
+  flex: 1;
+  padding: 4rem 3rem;
+  text-align: center;
 }
 
-.hero-text h2 {
-  font-size: 2rem;
+.landing-main h2 {
+  font-size: 2.8rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  color: #01579b;
 }
 
-.hero-text p {
-  margin-bottom: 1.5rem;
+.landing-main p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  color: #333;
   line-height: 1.5;
 }
 
-.hero-buttons .btn {
-  padding: 0.7rem 1.2rem;
-  margin-right: 0.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.btn.primary {
-  background: #2563eb;
+.cta-button {
+  background-color: #0288d1;
   color: white;
+  padding: 0.85rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(2, 136, 209, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn.secondary {
-  background: #f3f4f6;
-  color: #333;
-  border: 1px solid #ccc;
-}
-
-.hero-image img {
-  width: 400px;
-  max-width: 100%;
-}
-
-.features {
-  padding: 2rem;
-  background: #fff;
-}
-
-.feature-list {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.feature {
-  background: #f9fafb;
-  padding: 1rem;
-  border-radius: 6px;
-  flex: 1;
+.cta-button:hover {
+  background-color: #0277bd;
+  box-shadow: 0 8px 20px rgba(2, 136, 209, 0.6);
 }
 
 .landing-footer {
+  background-color: #e1f5fe;
   text-align: center;
-  padding: 1rem;
-  background: #f3f4f6;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #01579b;
+  font-weight: 600;
 }

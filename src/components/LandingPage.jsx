@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
 export default function LandingPage() {
@@ -7,8 +8,8 @@ export default function LandingPage() {
       <header className="landing-header">
         <h1>Mood Tracker App</h1>
         <nav>
-          <a href="/login">Login</a>
-          <a href="/signup">Sign Up</a>
+          <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link>
         </nav>
       </header>
       <main className="landing-main">
@@ -17,7 +18,7 @@ export default function LandingPage() {
           Our app helps you monitor your emotions over time, discover patterns,
           and take steps toward a healthier mindset.
         </p>
-        <a href="/signup" className="cta-button">Get Started</a>
+        <Link to="/signup" className="cta-button">Get Started</Link>
       </main>
       <footer className="landing-footer">
         <p>&copy; {new Date().getFullYear()} Mood Tracker Team. All rights reserved.</p>

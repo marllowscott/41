@@ -1,8 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  font-family: Arial, sans-serif;
+}
 .signup-container {
   max-width: 350px;
   margin: 80px auto;
   padding: 20px;
-  background: linear-gradient(135deg, #e0f7fa, #ffffff);;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
@@ -12,22 +18,25 @@
   margin-bottom: 20px;
 }
 
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .signup-form label {
-  display: block;
-  margin-top: 10px;
   font-weight: bold;
 }
 
 .signup-form input {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .signup-form button {
-  margin-top: 15px;
   width: 100%;
   padding: 10px;
   background-color: #4cafef;

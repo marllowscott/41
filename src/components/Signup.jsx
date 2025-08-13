@@ -5,11 +5,38 @@ export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Signing up:", { name, email, password });
-    alert("Signup successful (demo)!");
+    setMessage("");
+
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: email,
+          password: password,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage("Signup successful! You can now log in.");
+        setName("");
+        setEmail("");
+        setPassword("");
+      } else {
+        setMessage(data.msg || "An error occurred during signup.");
+      }
+    } catch (error) {
+      console.error("Error during signup:", error);
+      setMessage("Failed to connect to the server. Please try again later.");
+    }
   };
 
   return (
@@ -42,6 +69,7 @@ export default function Signup() {
 
         <button type="submit">Sign Up</button>
       </form>
+      {message && <p className="signup-message">{message}</p>}
     </div>
   );
 }

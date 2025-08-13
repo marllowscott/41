@@ -5,13 +5,7 @@ import "./LandingPage.css";
 export default function LandingPage() {
   return (
     <div className="landing-container">
-      <header className="landing-header">
-        <h1>Mood Tracker App</h1>
-        <nav>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </nav>
-      </header>
+     
       <main className="landing-main">
         <h2>Track your mood, improve your life</h2>
         <p>
